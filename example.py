@@ -58,7 +58,7 @@ def break_door():
     print(f"Your health is {mc.health}")
     print("The door won't budge either.")
     print("Will you try again or look for more options?")
-    choice = choice = int(input("What will you do?"))
+    choice = int(input("What will you do?"))
     if choice == 0:
         print("You have chosen to try again.")
         break_door()

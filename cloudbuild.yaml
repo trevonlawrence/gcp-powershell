@@ -1,5 +1,18 @@
+# Copying to a gcs bucket
+#steps:
+#- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#  args: ['gsutil', 'cp', 'example.py', 'gs://pybuck-1']
+
+# This is the packer build step
+
+
 steps:
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
-  args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
-timeout: '1600s'
+# Initialize packer 
+- name: 'gcr.io/ace-poc/packer'
+  args: ['init', '.']
+    
+# Run packer build
+- name: 'gcr.io/ace-poc/packer'
+  args: ['build', '-var-file=variables.pkvars.hcl', 'build.pkr.hcl']
+timeout: 660s
+tags: ['cloud-builders-community']

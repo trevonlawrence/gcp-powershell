@@ -107,7 +107,7 @@ def main():
 
 # Game Over
 def game_over():
-    system('cls')
+    system('clear')
     print("You have died")
     print("Would you like to restart?")
 # Introduction and character definition

@@ -1,10 +1,7 @@
 # Copying to a gcs bucket
-#steps:
-#- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-#  args: ['gsutil', 'cp', 'example.py', 'gs://pybuck-1']
-
-# This is the packer build step
-
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args: ['gsutil', 'cp', 'example.py', 'gs://pybuck-1']
 
 steps:
 # Initialize packer 

@@ -125,6 +125,7 @@ while mc.health > 0:
     sleep(2)
     print("Who am I?")
     continue_game()
+    continue_game()
     sleep(2)
     print(f"{mc.names}? Oh yeah...")
     sleep(2)

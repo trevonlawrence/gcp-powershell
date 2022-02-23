@@ -82,6 +82,7 @@ def break_door():
     system('cls')
     if choice == 0:
         print("You have chosen to try again.")
+        continue_game()
         break_door()
     elif choice == 1:
         print("You have chosen to look around")
